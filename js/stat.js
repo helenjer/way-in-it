@@ -1,14 +1,11 @@
-const stores = {
-	litres: 'download_litres',
-	ozon: 'buy_ozon',
-	bookmate: 'link_bookmate',
-	amazon: 'link_amazon',
-	ridero: 'link_ridero'
+const actions = {
+	subscribe: 'subscribe',
+	read: 'read',
 }
 
 const setGoals = () => {
-	for (const name in stores) {
-		const elem = document.getElementById(stores[name]);
+	for (const name in actions) {
+		const elem = document.getElementById(actions[name]);
 
 		elem && elem.addEventListener('click', () => {
 			ym && ym(65212666,'reachGoal',`click_${name}` );

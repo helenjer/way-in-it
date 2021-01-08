@@ -132,20 +132,18 @@ body {
 	color: var(--mark-color);
 }
 
-.actions-download {
-	margin-top: 20px;
+.actions-announce p {
+	margin: 0 1em;
+	line-height: 1.6em;	
+	text-align: center;
 }
 
-.actions-buy {
-	margin-top: 30px;
+.actions-announce-mark {
+	font-weight: bold;
 }
 
-.actions-others {
-	margin-top: 30px;
-}
-
-.actions-author {
-	margin-top: 35px;
+.actions-subscribe {
+	margin-top: 40px;
 }
 
 .actions-read {
