@@ -1,5 +1,7 @@
 const actions = {
-	subscribe: 'subscribe',
+	paper: 'paper',
+	audio: 'audio',
+	electron: 'electron',
 	read: 'read',
 }
 

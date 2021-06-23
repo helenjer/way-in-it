@@ -1,8 +1,9 @@
 :root {
-	--text-color: #333;
-	--mark-color: rgb(159, 69, 60);
-	--tone-color: rgb(158, 204, 228);
-	--tint-color: rgb(165, 233, 156);
+	--text-color: rgb(14, 22, 69);
+	--text-invert-color: rgb(255, 255, 255);
+	--mark-color: rgb(13, 155, 155);
+	--tone-color: rgb(220, 4, 140);
+	--tint-color: rgb(146, 205, 234);
 }
 
 * {
@@ -14,7 +15,7 @@
 
 body {
 	min-height: 100vh;
-	font: 16px Arial, sans-serif; 
+	font: 16px Arial, sans-serif;
 }
 
 .button {
@@ -45,12 +46,20 @@ body {
 }
 
 .button:active:before {
-	filter: brightness(0.9);
+	filter: brightness(0.8);
+}
+
+.button_invert {
+	border-color: var(--text-color);
+	color: var(--text-invert-color);
+}
+
+.button_invert:before {
+	background: var(--mark-color);
 }
 
 .link {
 	color: var(--tone-color);
-	filter: brightness(0.9);
 	text-decoration: underline;
 	cursor: pointer;
 	transition: 0.25s ease;
@@ -59,7 +68,7 @@ body {
 
 .link:hover,
 .link:active {
-	filter: brightness(1);
+	filter: brightness(0.7);
 }
 
 .link_contacts {
@@ -70,7 +79,7 @@ body {
 
 .link_contacts:hover {
 	color: currentColor;
-	opacity: 0.9;
+	opacity: 0.8;
 	text-decoration: none;
 	font-weight: bold;
 }
@@ -81,8 +90,8 @@ body {
 }
 
 .container {
-	display: grid; 
-	grid-template-rows: auto 70px; 
+	display: grid;
+	grid-template-rows: auto 70px;
 	grid-template-columns: repeat(3, minmax(200px, 1fr));
 	grid-template-areas:
 	"cover actions description"
@@ -93,6 +102,7 @@ body {
 
 .cover {
     display: flex;
+    background: var(--mark-color);
 }
 
 .cover-image {
@@ -106,7 +116,6 @@ body {
 }
 
 .actions {
-	padding-bottom: 25%;
 	display: flex;
     flex-direction: column;
     align-items: center;
@@ -114,27 +123,22 @@ body {
     position: relative;
 }
 
-.actions:after {
-	content: "";
-	background: url(../images/bug.jpg) 100% 100% / 60% no-repeat;
-	position: absolute;
-	width: 100%;
-    height: 100%;
-    z-index: -2;
-    bottom: 0;
-    right: 0;
-}
-
 .actions-title {
 	margin-bottom: 0.75em;
-	font-size: 2.4em;
+	font-size: 2.2em;
 	font-weight: bold;
 	color: var(--mark-color);
+	text-align: center;
 }
 
-.actions-announce p {
-	margin: 0 1em;
-	line-height: 1.6em;	
+.actions-sources {
+	margin: 1em 1em 0 1em;
+	line-height: 1.4em;
+	text-align: center;
+}
+
+.actions-announce {
+	margin-bottom: 2em;
 	text-align: center;
 }
 
@@ -142,8 +146,8 @@ body {
 	font-weight: bold;
 }
 
-.actions-subscribe {
-	margin-top: 40px;
+.actions-versions {
+	margin-top: 22px;
 }
 
 .actions-read {
